@@ -1,0 +1,17 @@
+apiVersion: gitops.jenkins-x.io/v1alpha1
+kind: SourceConfig
+metadata:
+  creationTimestamp: null
+spec:
+  jenkinsServers:
+  - groups:
+    - owner: keerthana4008
+      provider: https://github.com
+      providerKind: github
+      repositories:
+      - name: hello-k8s
+    server: examplejenkins
+  slack:
+    channel: '#jenkins-x-pipelines'
+    kind: failureOrNextSuccess
+    pipeline: release
