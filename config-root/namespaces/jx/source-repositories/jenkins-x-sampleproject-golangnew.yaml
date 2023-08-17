@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jenkins-x-sampleproject
+    provider: github
+    repository: golangnew
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jenkins-x-sampleproject-golangnew
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jenkins-x-sampleproject/golangnew.git
+  org: jenkins-x-sampleproject
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: golangnew
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jenkins-x-sampleproject/golangnew
