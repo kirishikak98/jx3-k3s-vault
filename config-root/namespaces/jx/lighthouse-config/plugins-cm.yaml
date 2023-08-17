@@ -6,6 +6,10 @@ data:
       repos:
       - kirishikak98/jx3-k3s-vault
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - keerthana4008/k8s
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      keerthana4008/k8s:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       kirishikak98/jx3-k3s-vault:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -26,6 +35,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      keerthana4008/k8s:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       kirishikak98/jx3-k3s-vault:
       - config-updater
       - approve
@@ -53,6 +76,11 @@ data:
     - repos:
       - kirishikak98/jx3-k3s-vault
       trusted_org: kirishikak98
+    - repos:
+      - keerthana4008/k8s
+      trusted_org: keerthana4008
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
