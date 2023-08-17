@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: keerthana4008
+    provider: github
+    repository: keerthana4008
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: keerthana4008-keerthana4008
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/keerthana4008/keerthana4008.git
+  org: keerthana4008
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: keerthana4008
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/keerthana4008/keerthana4008
