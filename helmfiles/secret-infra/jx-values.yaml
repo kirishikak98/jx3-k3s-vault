@@ -34,9 +34,11 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: kirishikak98
+    repository: jx3-k3s-vault
   - key: staging
   ingress:
-    domain: change.me
+    domain: 172.30.44.165.nip.io
     ignoreLoadBalancer: true
     kind: ingress
     namespaceSubDomain: .secret-infra.
@@ -44,6 +46,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: keerthana4008
   repository: bucketrepo
   secretStorage: vault
   vault: {}
