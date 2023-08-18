@@ -10,6 +10,12 @@ spec:
     repositories:
     - name: hello-k8s
     scheduler: in-repo
+  - owner: jenkins-x-sampleproject
+    provider: https://github.com
+    providerKind: github
+    repositories:
+    - name: nodehttp
+    scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
     kind: failureOrNextSuccess
