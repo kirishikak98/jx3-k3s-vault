@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: jenkins-x-sampleproject
+    provider: github
+    repository: new1
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: jenkins-x-sampleproject-new1
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/jenkins-x-sampleproject/new1.git
+  org: jenkins-x-sampleproject
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: new1
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/jenkins-x-sampleproject/new1
