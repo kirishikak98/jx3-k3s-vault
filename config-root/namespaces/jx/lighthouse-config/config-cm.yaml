@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        jenkins-x-sampleproject/new1: true
         jenkins-x-sampleproject/nodehttp: true
         keerthana4008/hello-k8s: true
         kirishikak98/jx3-k3s-vault: true
@@ -21,6 +22,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        jenkins-x-sampleproject/new1: merge
         jenkins-x-sampleproject/nodehttp: merge
         keerthana4008/hello-k8s: merge
         kirishikak98/jx3-k3s-vault: merge
@@ -35,6 +37,7 @@ data:
         - needs-rebase
         repos:
         - kirishikak98/jx3-k3s-vault
+        - jenkins-x-sampleproject/new1
         - jenkins-x-sampleproject/nodehttp
         - keerthana4008/hello-k8s
       - labels:
@@ -47,6 +50,7 @@ data:
         - needs-rebase
         repos:
         - kirishikak98/jx3-k3s-vault
+        - jenkins-x-sampleproject/new1
         - jenkins-x-sampleproject/nodehttp
         - keerthana4008/hello-k8s
       target_url: http://lighthouse.jx.172.30.44.165.nip.io/merge/status
