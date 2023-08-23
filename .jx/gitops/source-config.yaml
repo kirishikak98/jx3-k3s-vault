@@ -9,6 +9,7 @@ spec:
     providerKind: github
     repositories:
     - name: hello-k8s
+    - name: keerthana4008
     scheduler: in-repo
   - owner: jenkins-x-sampleproject
     provider: https://github.com
