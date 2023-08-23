@@ -16,6 +16,7 @@ spec:
     repositories:
     - name: new1
     - name: nodehttp
+    - name: nodehttp1
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
